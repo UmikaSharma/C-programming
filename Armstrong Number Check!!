@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,count=0,l,sum=0;
+    
+    scanf("%d",&l);
+    n=l;
+    while(n!=0){
+        n=n/10;
+        count++;
+    }
+    n=l;
+    while(n!=0){
+        int lastdigit =n%10;
+        sum=sum+pow(lastdigit,count);
+        n=n/10;
+    }
+    if (sum==l)
+        printf("Armstrong");
+        else
+            printf("Not Armstrong");
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
