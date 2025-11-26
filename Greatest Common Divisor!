@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,u,g;
+    scanf("%d %d",&n,&u);
+    for(int i=1;i<=n||i<=u;i++){
+        if (n%i==0 && u%i==0){
+            g=i;
+            
+        }
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  printf("%d ",g);  
+    return 0;
+}
