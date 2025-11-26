@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,l,m,count=0;
+    scanf("%d",&n);
+    l=n%10;
+    if(n>=0 && n<=9)
+    printf("%d",n);
+    
+    m=n;
+    while(m!=0){
+        m=m/10;
+        count++;
+    }
+    int first=n/(int)pow(10,count-1);
+    n=n%(int)pow(10,count-1);
+    n=n/10;
+    n=l*(int)pow(10,count-1)+n*10+first;
+    printf("%d",n);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
