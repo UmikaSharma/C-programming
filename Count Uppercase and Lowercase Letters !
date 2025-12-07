@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include<ctype.h>
+    int main(){
+    int k=0,l=0;
+    char s[1000];
+    scanf("%[^\n]",s);
+    int n=strlen(s);
+    for(int i=0;i<n;i++){
+        if(isupper(s[i])){
+            k++;
+        }
+        else if(islower(s[i])){
+            l++;
+        }
+    }
+    printf("%d %d",k,l);
+    
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
