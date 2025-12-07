@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include<ctype.h>
+
+int main(){
+    int k=0,l=0;
+    char s[1000];
+    scanf("%[^\n]",s);
+    int n=strlen(s);
+    for(int i=0;i<n;i++){
+        s[i]=toupper(s[i]);
+        if(s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U'){
+            k++;
+        }
+        else if(isalpha(s[i])){
+            l++;
+        }
+    }
+    printf("%d %d",k,l);
+}
