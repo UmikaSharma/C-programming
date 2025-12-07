@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include<ctype.h>
+int main() {
+    int rollno;
+    scanf("%d",&rollno);
+    char name[1000];
+    scanf(" %[^\n]",name);
+    char branch[1000];
+    scanf(" %[^\n]",branch);
+    char sec;
+    scanf(" %c",&sec);
+    char clg[1000];
+    scanf(" %[^\n]",clg);
+    int k=0;
+    int l=0;
+    for(int i=0;i<strlen(name);i++){
+        if(isalpha(name[i]) || isspace(name[i])){
+            k=1;
+            break;
+        }
+    }
+    for(int i=0;i<strlen(branch);i++){
+        if(isalpha(branch[i]) || isspace(branch[i])){
+            l=1;
+            break;
+        }
+    }
+    printf("Roll Number: %d\n",rollno);
+    if(k==1){
+        printf("Name: %s\n",name);
+    }
+    if(l==1){
+        printf("Branch: %s\n",branch);
+    }
+    printf("Section: %c\n",sec);
+    printf("College: %s\n",clg);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
