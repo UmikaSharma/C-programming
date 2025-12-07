@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include<ctype.h>
+
+int main() {
+int k=0;
+char s[1000];
+fgets(s,sizeof(s),stdin);
+for(int i=0;i<strlen(s);i++){
+    s[i]=toupper(s[i]); 
+if(s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U'){
+        k++;
+}
+}
+printf("%d",k);
+
+    return 0;
+}
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
