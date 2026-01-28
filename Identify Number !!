@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int isarmstrong(int n){
+    int count=0;
+    int l=n;
+    for(;l!=0;l=l/10){
+        count++;
+    }
+    l=n;
+    int sum=0;
+    for(;l!=0;l=l/10){
+        sum=sum+pow(l%10,count);
+    }
+    
+    if(sum==n){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+int isprime(int n){
+    if(n<2)return 0;
+    for(int i=2;i<n;i++){
+        if(n%i==0){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int isperfect(int n){
+    int sum=0;
+    for(int i=1;i<n;i++){
+        if(n%i==0){
+            sum=sum+i;
+        }
+    }
+    if(sum==n){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+int main() {
+    int n;
+    scanf("%d",&n);
+    if(isarmstrong(n)){
+        printf("Armstrong Number");
+    }else if(isprime(n)){
+        printf("Prime Number");
+    }else if(isperfect(n)){
+        printf("Perfect Number");
+    }else{
+        printf("None of these");
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
