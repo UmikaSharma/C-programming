@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,k,sum;
+    int *p1=&n;
+    int *p2=&k;
+    scanf("%d %d",&n,&k);
+    sum=*p1+*p2;
+    printf("%d",sum);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
