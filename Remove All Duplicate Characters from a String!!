@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char s[1000];
+    scanf("%[^\n]",s);
+    for(int i=0;i<strlen(s);i++){
+        int appeared=0;
+        for(int j=0;j<i;j++){
+            if(s[i]==s[j]){
+                appeared=1;
+                break;
+            }
+        }
+        if(appeared==0){
+            printf("%c",s[i]);
+        }
+    }
+    
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
