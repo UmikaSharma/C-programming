@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include<ctype.h>
+struct student{
+    char name[50];
+    int age;
+    char grade;
+};
+
+int main() {
+    struct student s;
+    scanf("%[^\n]",s.name);
+    getchar();
+    scanf("%d",&s.age);
+    getchar();
+    scanf("%c",&s.grade);
+    
+    printf("Name: %s\n",s.name);
+    
+    if(s.age>3 && s.age<20){
+        printf("Age: %d\n",s.age);
+    }
+    if(isupper(s.grade)){
+        printf("Grade: %c",s.grade);
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
