@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+struct date{
+    int day;
+    int month;
+    int year;
+};
+struct student{
+    char name[50];
+    struct date dob;
+};
+int main() {
+    struct student s;
+    scanf("%[^\n]",s.name);
+    getchar();
+    scanf("%d",&s.dob.day);
+    scanf("%d",&s.dob.month);
+    scanf("%d",&s.dob.year);
+    printf("Name: %s\n",s.name);
+    int k=0,l=0,m=0;
+    if(s.dob.day>=1 && s.dob.day<=31){
+        k=1;
+        
+    }
+    if(s.dob.month>=1 && s.dob.month<=12){
+        l=1;
+    }
+    if(s.dob.year>=1900 && s.dob.year<=2100){
+        m=1;
+    }
+    if(k==1 && l==1 && m==1){
+        printf("Date of Birth: %d/%d/%d",s.dob.day,s.dob.month,s.dob.year);
+    }
+    
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
