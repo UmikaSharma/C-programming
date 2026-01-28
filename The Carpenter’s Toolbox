@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+struct rectangle{
+    int length;
+    int width;
+};
+int getArea(struct rectangle r){
+    int area=r.length*r.width;
+    return area;
+}
+int getPerimeter(struct rectangle r){
+    int per=2*(r.length+r.width);
+    return per;
+}
+int main() {
+    struct rectangle r;
+    scanf("%d",&r.length);
+    scanf("%d",&r.width);
+    int res1=getArea(r);
+    int res2=getPerimeter(r);
+    printf("Area: %d\n",res1);
+    printf("Perimeter: %d",res2);
+    
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
